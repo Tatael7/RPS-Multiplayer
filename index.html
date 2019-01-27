@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>RPokemonS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2><marquee behavior="scroll" direction="left" class="alert alert-warning">Engage in a Pokemon Battle</marquee></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div>
+                        <div class="alert alert-danger" role="alert">
+                            Wins:<p id="wins"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="alert alert-light" id="chat">
+                        <p id="intro">
+                            Alright, are you ready to engage? You will be playing against another Pokemon trainer in Battle
+                            , simply choose your Pokemon, but chose wisely. First Trainer faint 3 of the opponents Pokemon
+                            win the battle.
+                        </p> 
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div>
+                        <div class="alert alert-success" role="alert">
+                            Losses:<p id="losses"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <div id="feild">
+                    </div>
+                    <button id="start">Ready</button>    
+                    <audio controls>
+                        <source id="theme" src="assets/battle.mp3" type="audio/mpeg">
+                    </audio>
+                    <form><textarea type="text" id="msg" placeholder="Talk some trash" rows="2" cols="50"></textarea></form><button id="chat">Send</button>
+                </div>   
+            </div>
+        </div>
+
+
+        <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script rel="javascript" type="text/javascript" src="assets/java/game.js"></script>
+
+    </body>
+    <footer>Armando Ochoa @2019</footer>
+</html>

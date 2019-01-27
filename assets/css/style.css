@@ -1,0 +1,12 @@
+/* hello world */
+
+body {
+    background-image: url("../images/backGround.jpg");
+    background-repeat: no-repeat;
+    background-size: 1500px 1000px;
+}
+
+.monBut {
+    margin: 10px;
+}
+
