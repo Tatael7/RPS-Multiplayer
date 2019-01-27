@@ -11,7 +11,16 @@ var config = {
 };
 firebase.initializeApp(config);
 
+//firebase stuff
 var database = firebase.database();
+var connectionsRef = database.ref("/connections");
+var connectedRef = database.ref(".info/connected");
+connectedRef.on("value", function(snap) {
+    if (snap.val()) {
+      var con = connectionsRef.push(true);
+      con.onDisconnect().remove();
+    }
+  });
 
 // score stuff
 var wins;
@@ -71,6 +80,12 @@ function iChoose() {
     });
 
 };
+
+database.ref().on("value", function(snapshot) {
+    console.log(snapshot.val());
+    choice = snapshot.val().choiceMade;
+
+});
 
 
 game();
